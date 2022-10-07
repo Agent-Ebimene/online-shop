@@ -1,0 +1,8 @@
+.button-container {
+  width: 240px;
+}
+.button-container button {
+  border: none;
+  width: 100%;
+  background: var(--yellow);
+}

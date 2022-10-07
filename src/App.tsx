@@ -1,21 +1,16 @@
 import React from 'react';
-import logo from './assets/images/logo.png';
-import cartIcon from './assets/images/eva_shopping-cart-outline.png';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-
+import { AppContextProvider } from './context/AppContext';
+import WorkshopGallery from './pages/WorkShop/WorkshopGallery';
 function App() {
   return (
-    <div>
-      <header className='app-header'>
-        <div>
-          <img src={logo}></img>
-        </div>
-        <article className='cart-container'>
-          <img src={cartIcon} alt='cart icon' />
-          <h4>Cart is Empty</h4>
-        </article>
-      </header>
-    </div>
+    <AppContextProvider>
+      <Routes>
+        <Route path='/' element={<WorkshopGallery />} />
+      </Routes>
+      <WorkshopGallery />
+    </AppContextProvider>
   );
 }
 
