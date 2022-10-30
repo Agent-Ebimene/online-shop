@@ -6,7 +6,7 @@ import useWorkShop from '../../hooks/useWorkShop';
 import './WorkShop.css';
 
 const WorkshopGallery: React.FC = () => {
-  const { getWorkshops, handleCartBar, workShops, loading } = useWorkShop();
+  const { getWorkshops,workShops, loading } = useWorkShop();
   console.log('App Re-rendered!');
   useEffect(() => {
     getWorkshops();

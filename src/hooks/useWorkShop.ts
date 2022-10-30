@@ -5,8 +5,6 @@ const useWorkShop = () => {
   const URL = ' http://localhost:3000/workshops';
   const [loading, setLoading] = useState<boolean>(true);
   const [workShops, setWorkShops] = useState<WorkShopType[]>([]);
-  const [cartItems, setCartItems] = useState<WorkShopType[]>([]);
-  const { count, setCount, isCartOpen, setIsCartOpen } = useContext(AppContext);
   const getWorkshops = async () => {
     const response = await fetch(URL);
     const responseData = await response.json();

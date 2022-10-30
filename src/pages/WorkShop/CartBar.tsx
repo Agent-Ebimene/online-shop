@@ -1,10 +1,9 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { AppContext } from '../../context/AppContext';
 import cartIcon from '../../assets/images/cartIcon.png';
 import closeIcon from '../../assets/images/close-icon.png';
 import notificationIcon from '../../assets/images/notification-icon.png';
 const CartBar = () => {
-  const { count } = useContext(AppContext);
   return (
     <section className='cart-bar-container'>
       <article className='cart-bar-header'>
@@ -14,7 +13,7 @@ const CartBar = () => {
           </div>
           <img src={notificationIcon} alt='Notification icon'></img>
         </div>
-        <h2>{count} Workshop</h2>
+        <h2> Workshop</h2>
         <div>
           <img src={closeIcon} alt='Cart close icon' />
         </div>
