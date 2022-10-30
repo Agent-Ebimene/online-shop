@@ -8,6 +8,9 @@ export interface WorkShopType {
   title: string;
   userId: number;
 }
+export interface WorkshopCardProps {
+  workshop: WorkShopType;
+}
 
 export interface AppContextType {
   count: number;

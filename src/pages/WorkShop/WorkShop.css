@@ -14,11 +14,11 @@
 .workshop-img-container {
   height: 180px;
   width: 150px;
-  object-fit: cover;
 }
 .workshop-img-container img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
   border-radius: 8px 0px 0px 8px;
 }
 
