@@ -1,8 +1,8 @@
 import React from 'react';
 import { WorkShopType, WorkshopCardProps } from '../../services/model';
 import cartIcon from '../../assets/images/cart-icon.png';
-import useWorkShop from '../../hooks/useWorkShop';
-const WorkshopCard: React.FC<WorkshopCardProps> = ({ workshop }) => {
+
+const WorkshopCard: React.FC<WorkshopCardProps> = ({ workshop, handleAddToCart }) => {
   const { id, date, title, price, imageUrl } = workshop;
   return (
     <section>
@@ -17,7 +17,7 @@ const WorkshopCard: React.FC<WorkshopCardProps> = ({ workshop }) => {
           <h2 className='workshop-title'>{title}</h2>
           <div className='workshop-card-footer'>
             <h3>{price} EUR</h3>
-            <button type='button'>
+            <button type='button' onClick={() => handleAddToCart(workshop)}>
               <img src={cartIcon} alt='cart icon' />
             </button>
           </div>

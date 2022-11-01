@@ -10,11 +10,12 @@ export interface WorkShopType {
 }
 export interface WorkshopCardProps {
   workshop: WorkShopType;
+  handleAddToCart: (workshop: WorkShopType) => void;
 }
 
 export interface AppContextType {
   count: number;
-  setCount: React.Dispatch<React.SetStateAction<number>>;
+  handleAddCount: () => void;
   isCartOpen: boolean;
   setIsCartOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
