@@ -5,12 +5,13 @@ import Header from '../../components/Header/Header';
 import { AppContext } from '../../context/AppContext';
 
 import LoadingSpinner from '../../components/LoadingSpinner/LoadingSpinner';
+import CartItems from '../../components/CartItems/CartItems';
 import WorkshopCard from './WorkshopCard';
 import useWorkShop from '../../hooks/useWorkShop';
 import './WorkShop.css';
 
 const WorkshopGallery: React.FC = () => {
-  const { cartItems, count } = useContext(AppContext);
+  const { cartItems, count, isCartOpen } = useContext(AppContext);
 
   const { getWorkshops, workShops, loading } = useWorkShop();
 
@@ -24,6 +25,7 @@ const WorkshopGallery: React.FC = () => {
   return (
     <div>
       <Header />
+      {isCartOpen && <CartItems />}
       {loading ? (
         <LoadingSpinner />
       ) : (

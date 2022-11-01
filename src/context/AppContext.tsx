@@ -14,6 +14,7 @@ export const AppContextProvider: React.FC<ProviderType> = ({ children }) => {
     if (!(cartItems.filter((item) => item.id === cartItem.id).length > 0)) {
       setCartItems((prev) => [...prev, { ...cartItem }]);
       handleAddCount();
+      handleOpenCart();
     } else {
       handleAddCount();
     }
