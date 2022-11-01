@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
+
+import { AppContext } from '../../context/AppContext';
 import { WorkshopCardProps } from '../../services/model';
 import cartIcon from '../../assets/images/cart-icon.png';
 
-const WorkshopCard: React.FC<WorkshopCardProps> = ({ workshop, handleAddToCart }) => {
+const WorkshopCard: React.FC<WorkshopCardProps> = ({ workshop }) => {
+  const { handleAddToCart } = useContext(AppContext);
   const { id, date, title, price, imageUrl } = workshop;
   return (
     <section>

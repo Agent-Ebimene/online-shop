@@ -10,17 +10,10 @@ import useWorkShop from '../../hooks/useWorkShop';
 import './WorkShop.css';
 
 const WorkshopGallery: React.FC = () => {
-  const { handleAddCount, count } = useContext(AppContext);
-  const [cartItems, setCartItems] = useState<WorkShopType[]>([]);
+  const { cartItems, count } = useContext(AppContext);
+
   const { getWorkshops, workShops, loading } = useWorkShop();
-  const handleAddToCart = (cartItem: WorkShopType) => {
-    if (!(cartItems.filter((item) => item.id === cartItem.id).length > 0)) {
-      setCartItems((prev) => [...prev, { ...cartItem }]);
-      handleAddCount();
-    } else {
-      handleAddCount();
-    }
-  };
+
   console.log('App Re-rendered!');
   useEffect(() => {
     getWorkshops();
@@ -38,7 +31,7 @@ const WorkshopGallery: React.FC = () => {
           <h2>Workshops</h2>
           <h3>Displayed:</h3>
           {workShops.map((workshop) => (
-            <WorkshopCard key={workshop.id} workshop={workshop} handleAddToCart={handleAddToCart} />
+            <WorkshopCard key={workshop.id} workshop={workshop} />
           ))}
         </div>
       )}
