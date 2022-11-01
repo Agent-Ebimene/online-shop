@@ -1,5 +1,9 @@
-.cart-items{
-    height:600px;
-    width:500px;
-    background:red;
+.cart-items {
+  height: 600px;
+  width: 500px;
+  background: red;
+}
+.cart-image {
+  width: 200px;
+  height: 100px;
 }

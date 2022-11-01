@@ -17,9 +17,9 @@
   align-items: center;
 }
 
-.cart-container img {
-  width: 24px;
-  height: 25.25px;
+.cart-icon {
+  width: 30px;
+  height: 30px;
   cursor: pointer;
 }
 .cart-container h4 {
@@ -30,4 +30,17 @@
   .cart-container {
     margin-right: 12.4rem;
   }
+}
+.cart-icon-container {
+  position: relative;
+}
+.notification-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.notification-icon {
+  width: 10px;
+  height: 10px;
 }
