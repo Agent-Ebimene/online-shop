@@ -1,5 +1,5 @@
 import React from 'react';
-import { WorkShopType, WorkshopCardProps } from '../../services/model';
+import { WorkshopCardProps } from '../../services/model';
 import cartIcon from '../../assets/images/cart-icon.png';
 
 const WorkshopCard: React.FC<WorkshopCardProps> = ({ workshop, handleAddToCart }) => {

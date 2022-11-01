@@ -1,6 +1,6 @@
-import { useState, useContext } from 'react';
+import { useState } from 'react';
 import { WorkShopType } from '../services/model';
-import { AppContext } from '../context/AppContext';
+
 const useWorkShop = () => {
   const URL = ' http://localhost:3000/workshops';
   const [loading, setLoading] = useState<boolean>(true);
